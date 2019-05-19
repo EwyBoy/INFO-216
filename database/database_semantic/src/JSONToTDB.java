@@ -19,22 +19,25 @@ import java.util.Map;
 import java.util.Set;
 
 public class JSONToTDB {
-    private Model model;
 
+    private Model model;
 
     public JSONToTDB(String jsonPath) {
         Dataset dataset = TDBFactory.createDataset("movie_tdb");
         Model model = dataset.getDefaultModel();
+
         if (model.isEmpty()) {
             String jsonString = "";
+
             try {
                 jsonString = jsonFileToString(jsonPath);
-            }
-            catch(IOException e) {
+            } catch(IOException e) {
                 e.printStackTrace();
             }
+
             this.model= parseJSONString(jsonString, model);
         }
+
         System.out.println("TEST: " + model.isEmpty());
     }
 
@@ -42,12 +45,12 @@ public class JSONToTDB {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(pathname));
 
         StringBuffer stringBuffer = new StringBuffer();
-        String line = null;
+        String line;
 
-        while((line =bufferedReader.readLine())!=null){
-
+        while((line =bufferedReader.readLine()) != null){
             stringBuffer.append(line).append("\n");
         }
+
         return stringBuffer.toString();
 
     }
@@ -65,16 +68,19 @@ public class JSONToTDB {
         String keywordURI = "http://info216.no/v2019/vocabulary/keyword#";
         String genreURI = "http://info216.no/v2019/vocabulary/genre#";
 
-//
-//        String owl = "http://www.w3.org/2002/07/owl#";
-//        String rdfs = "http://www.w3.org/2000/01/rdf-schema#";
-//
-//        Resource movieClass = model.createResource(OWL.Class);
-//        Resource personClass = model.createResource(OWL.Class);
-//
-//        Resource actorClass = model.createResource(OWL.Class);
-//        actorClass.addProperty(RDFS.subClassOf, personClass);
 
+       /*
+
+       String owl = "http://www.w3.org/2002/07/owl#";
+       String rdfs = "http://www.w3.org/2000/01/rdf-schema#";
+
+       Resource movieClass = model.createResource(OWL.Class);
+       Resource personClass = model.createResource(OWL.Class);
+
+       Resource actorClass = model.createResource(OWL.Class);
+       actorClass.addProperty(RDFS.subClassOf, personClass);
+
+       */
 
         for(JsonElement movie : jsonArray) {
             JsonObject movieObject = movie.getAsJsonObject();
@@ -103,7 +109,7 @@ public class JSONToTDB {
                     .addProperty(VCARD.FN, movieObject.get("director").getAsString())
                     .addProperty(VCARD.TITLE, "Director");
 
-//            System.out.println("HELLLO" + movieObject.get("title").getAsString());
+            // System.out.println("Movie: " + movieObject.get("title").getAsString());
 
             Resource movieRDF = model.createResource(dbp + movieObject.get("title").getAsString())
                     .addProperty(RDF.type, dbp + "Film")
@@ -122,9 +128,7 @@ public class JSONToTDB {
                     .addProperty(imdb_id, movieObject.get("imdb_id").getAsString())
                     .addProperty(imdb_link, movieObject.get("imdb_link").getAsString());
 
-//                    model.write(System.out, "TURTLE");
-
-
+            //model.write(System.out, "TURTLE");
 
             // For each movie, create an actors property that points to a blank node.
             JsonObject actorsJson = movieObject.getAsJsonObject("actors");
@@ -157,7 +161,8 @@ public class JSONToTDB {
                 movieRDF.addProperty(keywords, keywordsBlankNode);
             }
         }
-//        return the model contain all semantic triples made from the original JSON document.
+
+        //return the model contain all semantic triples made from the original JSON document.
         return model;
     }
 

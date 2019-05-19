@@ -2,6 +2,10 @@
   <dictionary name="Eivind">
     <words>
       <w>caprio</w>
+      <w>imdb</w>
+      <w>qsol</w>
+      <w>rdfs</w>
+      <w>sparql</w>
     </words>
   </dictionary>
 </component>

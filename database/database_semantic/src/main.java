@@ -7,11 +7,11 @@ public class main {
     public static void main(String[] args) {
         firstTimeSetup();
         SparqlQueries sparql = new SparqlQueries(model);
-//        sparql.sparqlEndpoint("Interstellar");
-//        sparql.sparqlEndpointGetComment("Interstellar");
-//        sparql.sparqlEndpointGetSubjects("Interstellar");
-//        sparql.AllMoviesOfDirector("quentin");
-//        sparql.AllMoviesOfActor("leonardo");
+        // sparql.sparqlEndpoint("Interstellar");
+        // sparql.sparqlEndpointGetComment("Interstellar");
+        // sparql.sparqlEndpointGetSubjects("Interstellar");
+        // sparql.AllMoviesOfDirector("quentin");
+        sparql.AllMoviesOfActor("Leonardo DiCaprio");
         sparql.close();
     }
 
