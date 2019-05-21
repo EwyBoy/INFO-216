@@ -58,9 +58,6 @@ public class SparqlQueries {
         resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?comment")));
     }
 
-
-
-
     public Boolean searchForAMovie(String title, Model model) {
         boolean match = false;
         String query = "PREFIX m: <http://info216.no/v2019/vocabulary/> SELECT DISTINCT ?movie ?property ?value WHERE { ?movie m:title ?title .?movie ?property ?value .FILTER regex(str(?title), \""+title+"\") .}";
@@ -137,7 +134,7 @@ public class SparqlQueries {
         boolean match = false;
         String query = "PREFIX m: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#>" +
                 "SELECT DISTINCT ?title WHERE { ?movie m:title ?title .?movie m:actors ?actors. ?actors dbp:starring ?actor. ?actor vcard:FN ?name." +
-                "FILTER regex(str(?name), \""+actor+"\",\"i\").}";
+                "FILTER regex(str(?name), \"" + actor + "\",\"i\").}";
         System.out.println(query);
 
         ResultSet resultSet = QueryExecutionFactory
