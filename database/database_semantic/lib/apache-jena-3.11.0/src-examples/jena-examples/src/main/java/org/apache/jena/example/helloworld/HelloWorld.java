@@ -16,6 +16,8 @@
  * limitations under the License.
  */
 
+package org.apache.jena.example.helloworld;
+
 
 // Imports
 ///////////////

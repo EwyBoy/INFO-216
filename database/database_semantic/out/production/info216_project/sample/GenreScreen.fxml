@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" stylesheets="@dark_theme.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GenreController">
+   <children>
+      <GridPane fx:id="gridPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" stylesheets="@dark_theme.css">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Select 3 genres that you like:">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Label>
+            <Button fx:id="buttonRecommend" mnemonicParsing="false" onAction="#recommendButtonPushed" text="Recommend" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="buttonBack2" mnemonicParsing="false" onAction="#backButtonPushed2" text="Back" GridPane.halignment="LEFT" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="15.0" />
+               </GridPane.margin>
+            </Button>
+            <CheckBox fx:id="checkBoxDrama" mnemonicParsing="false" text="Drama" GridPane.rowIndex="1" />
+            <CheckBox fx:id="checkBoxThriller" mnemonicParsing="false" text="Thriller" GridPane.rowIndex="2" />
+            <CheckBox fx:id="checkBoxComedy" mnemonicParsing="false" text="Comedy" GridPane.rowIndex="3" />
+            <CheckBox fx:id="checkBoxRomance" mnemonicParsing="false" text="Romance" GridPane.rowIndex="4" />
+            <CheckBox fx:id="checkBoxHorror" mnemonicParsing="false" text="Horror" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <CheckBox fx:id="checkBoxAction" mnemonicParsing="false" text="Action" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox fx:id="checkBoxScienceFiction" mnemonicParsing="false" text="Science Fiction" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox fx:id="checkBoxDocumentary" mnemonicParsing="false" text="Documentary" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <CheckBox fx:id="checkBoxAdventure" mnemonicParsing="false" text="Adventure" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

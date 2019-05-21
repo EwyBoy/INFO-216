@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package jena.examples.rdf;
+package jena.examples.rdf ;
 
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.*;
