@@ -1,10 +1,11 @@
 package Database;
+
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.tdb.TDBFactory;
-
-
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class SparqlQueries {
 
@@ -22,8 +23,7 @@ public class SparqlQueries {
         return movies;
     }
 
-
-    public void createMovieObjects() {
+    public void createMovieObjects(HashMap<String, Movie> movieMap) {
         String query =
                 ""
                 + "PREFIX info216: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/page/> PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
@@ -40,8 +40,8 @@ public class SparqlQueries {
                         + "dbp:Hyperlink ?link ;"
                         + "info216:imdbId ?id ;"
                         + "dbo:director ?director."
-                             + "?director vcard:FN ?directorName."
-                + "}";
+                        + "?director vcard:FN ?directorName."
+                        + "}";
 
         ResultSet resultSet = QueryExecutionFactory
                 .create(query, model)
@@ -49,11 +49,9 @@ public class SparqlQueries {
 
         while(resultSet.hasNext()) {
             QuerySolution qsol = resultSet.next();
-//            ArrayList<String> actors = actorsOfTitle(qsol.get("?title").toString());
-//            ArrayList<String> keywords = keywordsOfTitle(qsol.get("?title").toString());
-
+            // ArrayList<String> actors = actorsOfTitle2(qsol.get("?title").toString());
+            // ArrayList<String> keywords = keywordsOfTitle(qsol.get("?title").toString());
             if (qsol.get("?title") != null) {
-                if (!(qsol.get("?title").toString().equals("The Host ")) || !(qsol.get("?title").toString().equals("Out of the Blue "))) {
                     Movie movie = new Movie(
                             qsol.get("?title").toString(),
                             qsol.get("?year").toString(),
@@ -64,17 +62,17 @@ public class SparqlQueries {
                             qsol.get("?gross").toString(),
                             qsol.get("?votes").toString(),
                             qsol.get("?rating").toString(),
-                            "unknwown score",
+                            "unknown score",
                             qsol.get("?link").toString(),
                             qsol.get("?id").toString(),
                             qsol.get("?directorName").toString(),
                             null,
                             null);
-                    movies.add(movie);
+                    movieMap.put(qsol.get("?title").toString(), movie);
+//                }
                 }
             }
 
-        }
     }
 
 
@@ -103,7 +101,7 @@ public class SparqlQueries {
                 "WHERE {" +
                   //"<http://dbpedia.org/resource/" + title + "> rdfs:label ?title." +
                     "<http://dbpedia.org/resource/" + title + "> dc:subject ?subject." +
-                   //"FILTER (lang(?subject) = 'en')." +
+                    //"FILTER (lang(?subject) = 'en')." +
                 "}";
         System.out.println("QUERY: " + query);
         ResultSet resultSet = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query).execSelect();
@@ -166,7 +164,7 @@ public class SparqlQueries {
             match = true;
         }
 
-//        resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?title")));
+        // resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?title")));
 
         return match;
     }
@@ -182,7 +180,24 @@ public class SparqlQueries {
                 .create(query, model)
                 .execSelect();
         resultSet.forEachRemaining(qsol ->
-                list.add(qsol.get("?name").toString())
+            System.out.println(qsol.get("?name").toString())
+            // list.add(qsol.get("?name").toString())
+        );
+        return list;
+    }
+
+    public ArrayList<String> actorsOfTitle2(String title) {
+        ArrayList<String> list = new ArrayList<>();
+        boolean match = false;
+        String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/> PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> "+
+                "SELECT DISTINCT ?actor WHERE { ?movie info216:title ?title. ?movie dbo:actor ?actor. " +
+                "}";
+        ResultSet resultSet = QueryExecutionFactory
+                .create(query, model)
+                .execSelect();
+        resultSet.forEachRemaining(qsol ->
+            System.out.println(qsol.get("?actor\n").toString())
+            // list.add(qsol.get("?name").toString())
         );
         return list;
     }
@@ -203,7 +218,7 @@ public class SparqlQueries {
     }
 
 
-    public Boolean AllMoviesOfDirector(String director) {
+    public Boolean allMoviesOfDirector(String director) {
         boolean match = false;
         String query = "PREFIX m: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#>" +
                 "SELECT DISTINCT ?title WHERE { ?movie m:title ?title .?movie dbp:director ?director. ?director vcard:FN ?name."+
@@ -219,23 +234,34 @@ public class SparqlQueries {
         return match;
     }
 
-    public Boolean AllMoviesOfActor(String actor) {
-        boolean match = false;
+    public ResultSet allMoviesOfActor(String actor) {
         String query = "PREFIX m: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#>" +
                 "SELECT DISTINCT ?title WHERE { ?movie m:title ?title .?movie m:actors ?actors. ?actors dbp:starring ?actor. ?actor vcard:FN ?name." +
                 "FILTER regex(str(?name), \"" + actor + "\",\"i\").}";
-        System.out.println(query);
+        //System.out.println(query);
 
         ResultSet resultSet = QueryExecutionFactory
                 .create(query, model)
                 .execSelect();
         if(resultSet.hasNext()) {
-            match = true;
         }
 
-        resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?title")));
+        //resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?title")));
 
-        return match;
+        return resultSet;
+    }
+
+    public ResultSet allTitles() {
+        String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/>" +
+                "SELECT DISTINCT ?title" +
+                " WHERE { ?movie info216:title ?title " +
+                ".}" +
+                "LIMIT 4830";
+
+        ResultSet resultSet = QueryExecutionFactory
+                .create(query, model)
+                .execSelect();
+        return resultSet;
     }
 
     public Boolean personDirectorAndActor() {
@@ -260,9 +286,9 @@ public class SparqlQueries {
     public void printAllTriples() {
         ResultSet resultSet = QueryExecutionFactory
                 .create(""
-                        + "SELECT ?s ?p ?o WHERE {"
-                        + "?s ?p ?o ."
-                        + "}", model)
+                    + "SELECT ?s ?p ?o WHERE {"
+                    + "?s ?p ?o ."
+                    + "}", model)
                 .execSelect();
         resultSet.forEachRemaining(qsol -> System.out.println(qsol.toString()));
     }

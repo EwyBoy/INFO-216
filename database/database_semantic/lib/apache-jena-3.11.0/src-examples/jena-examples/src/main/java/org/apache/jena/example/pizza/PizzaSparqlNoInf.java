@@ -44,7 +44,7 @@ public class PizzaSparqlNoInf extends Base
     /***********************************/
 
     // Directory where we've stored the local data files, such as pizza.rdf.owl
-    public static final String SOURCE = "./src/main/resources/data/";
+    public static final String SOURCE = "./src/Main/resources/data/";
 
     // Pizza ontology namespace
     public static final String PIZZA_NS = "http://www.co-ode.org/ontologies/pizza/pizza.owl#";

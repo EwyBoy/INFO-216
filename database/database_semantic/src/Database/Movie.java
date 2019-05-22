@@ -19,7 +19,6 @@ public class Movie {
     private ArrayList<String> actors;
     private ArrayList<String> keywords;
 
-
     public Movie (
             String title,
             String year,

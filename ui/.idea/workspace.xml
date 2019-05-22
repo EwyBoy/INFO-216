@@ -2,10 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/database_semantic/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../database/database_semantic/src/Database/MovieMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../database/database_semantic/src/MainOld.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../front-end/.idea/front-end.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/.idea/dictionaries/Eivind.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/.idea/dictionaries/Eivind.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../database/database_semantic/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT7_ParserPiped.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT7_ParserPiped.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/jena-examples/bin/get-data" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/jena-examples/bin/get-data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/pizza/PizzaSparqlNoInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/pizza/PizzaSparqlNoInf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/movies.json" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/movies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/out/production/info216_project/sample/MovieInputScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/out/production/info216_project/sample/MovieInputScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/Algorithm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/Database/JSONToTDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/Database/JSONToTDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/Database/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/Database/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/Database/SparqlQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/Database/SparqlQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/Database/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/Database/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/main_old.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/sample/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/sample/GenreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/sample/MovieInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/sample/MovieInputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/sample/MovieInputScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/sample/MovieInputScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/sample/RecommendationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/sample/RecommendationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../database/database_semantic/src/sample/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../database/database_semantic/src/sample/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../front-end/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../front-end/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,8 +81,7 @@
     <breakpoint_rules converted="true" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="JavaFxApplication" />
@@ -69,10 +91,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#547#548#0" expanded="true" />
                 <element signature="e#575#576#0" expanded="true" />
               </folding>
             </state>
@@ -90,12 +113,12 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/sample.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="20" column="92" lean-forward="true" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
+              <caret line="20" column="92" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
             </state>
           </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -112,6 +135,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Main.java" />
       </list>
     </option>
   </component>
@@ -131,6 +155,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -153,8 +179,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,9 +189,11 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RunDashboard">
@@ -266,32 +292,30 @@
       <option name="presentableId" value="Default" />
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1558452016657" duration="670000" />
+      <workItem from="1558452016657" duration="1296000" />
+      <workItem from="1558470742819" duration="57000" />
+      <workItem from="1558474636952" duration="1752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1972000" />
+    <option name="totallyTimeSpent" value="4407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.20926517" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.21352503" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="LuaCheck" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962447" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850778" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -302,10 +326,10 @@
       <window_info anchor="bottom" id="Profiler" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="15" />
+      <window_info anchor="bottom" id="Terminal" order="16" />
+      <window_info anchor="bottom" id="LuaCheck" order="17" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -313,6 +337,10 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="right" id="Maven" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="9" />
+      <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +355,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="21" lean-forward="true" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#547#548#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -338,18 +378,7 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="20" column="92" lean-forward="true" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-          </folding>
+          <caret line="20" column="92" selection-start-line="20" selection-start-column="92" selection-end-line="20" selection-end-column="92" />
         </state>
       </provider>
     </entry>

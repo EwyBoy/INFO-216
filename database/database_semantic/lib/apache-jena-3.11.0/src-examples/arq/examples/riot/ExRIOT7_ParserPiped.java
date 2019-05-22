@@ -60,7 +60,7 @@ public class ExRIOT7_ParserPiped {
         // Start the parser on another thread
         executor.submit(parser);
 
-        // We will consume the input on the main thread here
+        // We will consume the input on the Main thread here
 
         // We can now iterate over data as it is parsed, parsing only runs as
         // far ahead of our consumption as the buffer size allows

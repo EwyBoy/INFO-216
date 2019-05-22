@@ -38,9 +38,8 @@ public class JSONToTDB {
 
             this.model= parseJSONString(jsonString, model);
         }
-
-        System.out.println("TEST: " + model.isEmpty());
     }
+
 
     public String jsonFileToString(String pathname) throws IOException{
         BufferedReader bufferedReader = new BufferedReader(new FileReader(pathname));
@@ -58,37 +57,39 @@ public class JSONToTDB {
 
 
     public Model parseJSONString(String json, Model model) {
+
         JsonElement jsonElement = new JsonParser().parse(json);
         JsonArray jsonArray = jsonElement.getAsJsonArray();
 
         String dbo = "http://dbpedia.org/ontology/";
         String dbp = "http://dbpedia.org/page/";
-        String dbpedia_extension = "http://dbpedia.org/ontology/extension/";
 
+        // Our extension uri that we use for the cases where we could not find a fitting property on dbpedia.
         String info216 = "http://info216.no/v2019/vocabulary/";
+
         String keywordURI = "http://info216.no/v2019/vocabulary/keyword#";
         String genreURI = "http://info216.no/v2019/vocabulary/genre#";
 
-//        String rdf = "https://www.w3.org/1999/02/22-rdf-syntax-ns#";
+        // String rdf = "https://www.w3.org/1999/02/22-rdf-syntax-ns#";
 
 
-       /*
+        /*
 
-       String owl = "http://www.w3.org/2002/07/owl#";
-       String rdfs = "http://www.w3.org/2000/01/rdf-schema#";
+        String owl = "http://www.w3.org/2002/07/owl#";
+        String rdfs = "http://www.w3.org/2000/01/rdf-schema#";
 
-       Resource movieClass = model.createResource(OWL.Class);
-       Resource personClass = model.createResource(OWL.Class);
+        Resource movieClass = model.createResource(OWL.Class);
+        Resource personClass = model.createResource(OWL.Class);
 
-       Resource actorClass = model.createResource(OWL.Class);
-       actorClass.addProperty(RDFS.subClassOf, personClass);
+        Resource actorClass = model.createResource(OWL.Class);
+        actorClass.addProperty(RDFS.subClassOf, personClass);
 
-       */
+        */
 
         for(JsonElement movie : jsonArray) {
             JsonObject movieObject = movie.getAsJsonObject();
 
-//            Property rdfType = model.createProperty(rdf + "type");
+            // Property rdfType = model.createProperty(rdf + "type");
 
             Property title = model.createProperty(info216 + "title");
             Property year = model.createProperty(dbo + "year");
@@ -140,6 +141,9 @@ public class JSONToTDB {
             Set<Map.Entry<String, JsonElement>> entrySet = actorsJson.entrySet();
             Resource actorsBlankNode = model.createResource();
 
+
+
+
             // The blank node has an actor property for each actor that stars in this movie.
             for(Map.Entry<String,JsonElement> entry : entrySet){
                 Resource actorPerson = model.createResource(dbp + actorsJson.get(entry.getKey()).getAsString())
@@ -148,8 +152,10 @@ public class JSONToTDB {
                         .addProperty(VCARD.FN, actorsJson.get(entry.getKey()).getAsString())
                         .addProperty(VCARD.TITLE, "Actor");
                 actorsBlankNode.addProperty(actor, actorPerson);
-                movieRDF.addProperty(actors, actorsBlankNode);
+
             }
+            movieRDF.addProperty(actors, actorsBlankNode);
+
 
             // For each movie, create a keywords property that points to a blank node.
             // The blank node has a keyword property for each keyword that is associated with this movie.
@@ -163,8 +169,10 @@ public class JSONToTDB {
                         .addProperty(RDF.type, keywordURI)
                         .addProperty(RDFS.label, keywordsJSON.get(entry.getKey()).getAsString());
                 keywordsBlankNode.addProperty(keyword, keywordResource);
-                movieRDF.addProperty(keywords, keywordsBlankNode);
+
             }
+            movieRDF.addProperty(keywords, keywordsBlankNode);
+
         }
 
         //return the model contain all semantic triples made from the original JSON document.
