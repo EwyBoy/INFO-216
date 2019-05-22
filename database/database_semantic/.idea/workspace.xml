@@ -2,71 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b60df944-f559-4428-b395-09b2856aa838" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Database/MovieMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainOld.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fx/controllers/MovieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fx/models/MovieModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../front-end/.idea/front-end.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Eivind.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Eivind.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT7_ParserPiped.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT7_ParserPiped.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/bin/get-data" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/bin/get-data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/pizza/PizzaSparqlNoInf.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/pizza/PizzaSparqlNoInf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/GOSP.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/GOSP.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/GPOS.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/GPOS.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/GSPO.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/GSPO.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/OSP.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/OSP.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/OSPG.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/OSPG.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/POS.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/POS.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/POSG.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/POSG.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/SPO.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/SPO.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/SPOG.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/SPOG.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/journal.jrnl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/node2id.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/node2id.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/nodes.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/prefix2id.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/prefix2id.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/prefixIdx.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/prefixIdx.idn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movie_tdb/prefixes.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies.json" beforeDir="false" afterPath="$PROJECT_DIR$/movies.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/info216_project/sample/GenreScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/info216_project/sample/MovieInputScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/info216_project/sample/RecommendationScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/info216_project/sample/WelcomeScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/info216_project/sample/dark_theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movie_tdb/tdb.lock" beforeDir="false" afterPath="$PROJECT_DIR$/movie_tdb/tdb.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/info216_project/fx/fmxl/MovieInputScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/info216_project/fx/fmxl/MovieInputScreen.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/JSONToTDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/JSONToTDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database/SparqlQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/SparqlQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main_old.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/controllers/GenreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/GenreScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/fmxl/GenreScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MovieInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/controllers/MovieInputController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/MovieInputScreen.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/RecommendationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/controllers/RecommendationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/RecommendationScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/fmxl/RecommendationScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/controllers/WelcomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/WelcomeScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/fmxl/WelcomeScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/dark_theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/themes/dark_theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../front-end/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../front-end/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ui/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ui/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ui/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ui/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainOld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fx/controllers/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/controllers/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fx/controllers/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/controllers/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fx/fmxl/GenreScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fx/fmxl/GenreScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,30 +28,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
-                <element signature="e#396#397#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fx/fmxl/RecommendationScreen.fxml">
-          <provider selected="true" editor-type-id="text-editor" />
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fx/controllers/MovieController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
+            <state relative-caret-position="282">
+              <caret line="239" column="11" lean-forward="true" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -113,31 +40,39 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/JSONToTDB.java">
+        <entry file="file://$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            <state relative-caret-position="433">
+              <caret line="107" column="60" lean-forward="true" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/fx/fmxl/GenreScreen.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/movies.json">
+        <entry file="file://$PROJECT_DIR$/src/fx/controllers/GenreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="129713" column="41" selection-start-line="129713" selection-start-column="41" selection-end-line="129713" selection-end-column="41" />
+            <state relative-caret-position="510">
+              <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/MovieMap.java">
+        <entry file="file://$PROJECT_DIR$/src/fx/controllers/WelcomeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -145,41 +80,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fx/controllers/MovieInputController.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/fx/controllers/RecommendationController.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Database/Movie.java">
+        <entry file="file://$PROJECT_DIR$/src/Algorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/fx/fmxl/WelcomeScreen.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Database/SparqlQueries.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="258" column="27" selection-start-line="258" selection-start-column="27" selection-end-line="258" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#586#587#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -202,6 +122,10 @@
       <find>&quot;title&quot;: &quot;</find>
       <find>Tin Can Man</find>
       <find>The Circle</find>
+      <find>movieMap.get(</find>
+      <find>.getTitle())</find>
+      <find>star wars</find>
+      <find>back</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -226,7 +150,6 @@
         <option value="$PROJECT_DIR$/src/UI/GenreController.java" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/Database/MovieMap.java" />
-        <option value="$PROJECT_DIR$/src/Algorithm.java" />
         <option value="$PROJECT_DIR$/src/main.java" />
         <option value="$PROJECT_DIR$/src/sample/MovieInputScreen.fxml" />
         <option value="$PROJECT_DIR$/src/Database/Movie.java" />
@@ -238,15 +161,17 @@
         <option value="$PROJECT_DIR$/src/sample/MovieInputController.java" />
         <option value="$PROJECT_DIR$/src/fx/MovieInputController.java" />
         <option value="$PROJECT_DIR$/src/fx/controllers/MovieInputController.java" />
-        <option value="$PROJECT_DIR$/src/fx/controllers/WelcomeController.java" />
-        <option value="$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml" />
         <option value="$PROJECT_DIR$/src/fx/models/MovieModel.java" />
-        <option value="$PROJECT_DIR$/src/MainOld.java" />
         <option value="$PROJECT_DIR$/movies.json" />
         <option value="$PROJECT_DIR$/src/Database/JSONToTDB.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/fx/controllers/MovieController.java" />
+        <option value="$PROJECT_DIR$/src/MainOld.java" />
         <option value="$PROJECT_DIR$/src/Database/SparqlQueries.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/fx/controllers/WelcomeController.java" />
+        <option value="$PROJECT_DIR$/src/Algorithm.java" />
+        <option value="$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/fx/fmxl/GenreScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/fx/controllers/MovieController.java" />
       </list>
     </option>
   </component>
@@ -293,19 +218,26 @@
               <item name="fx" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="database_semantic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="database_semantic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="fx" type="462c0819:PsiDirectoryNode" />
+              <item name="fmxl" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sample" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -353,6 +285,8 @@
       </method>
     </configuration>
     <configuration name="Run Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8.0_201" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="info216_project" />
       <method v="2">
@@ -411,18 +345,19 @@
       <workItem from="1558283389370" duration="597000" />
       <workItem from="1558292033379" duration="2545000" />
       <workItem from="1558357127706" duration="11729000" />
-      <workItem from="1558470811817" duration="17023000" />
+      <workItem from="1558470811817" duration="17258000" />
+      <workItem from="1558547691922" duration="11526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34297000" />
+    <option name="totallyTimeSpent" value="46058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19542067" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19755058" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -431,7 +366,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.63555557" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" weight="0.33777776" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3422222" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -454,6 +389,39 @@
       <window_info anchor="right" id="Maven" order="8" />
       <window_info anchor="right" id="Database" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19755058" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946752" visible="true" weight="0.25666666" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3422222" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5005325" side_tool="true" weight="0.41333333" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3288889" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="LuaCheck" order="13" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -476,41 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
           <caret line="106" column="13" selection-start-line="106" selection-start-column="13" selection-end-line="106" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/controllers/RecommendationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="3210" column="67" lean-forward="true" selection-start-line="3210" selection-start-column="67" selection-end-line="3210" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Algorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/controllers/WelcomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -550,62 +483,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainOld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/apache-jena-3.11.0/lib/jena-arq-3.11.0.jar!/org/apache/jena/sparql/lang/ParserSPARQL11.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/controllers/GenreController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1156">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="28" column="103" selection-start-line="28" selection-start-column="103" selection-end-line="28" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/GenreScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="57" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/WelcomeScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/RecommendationScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/Movie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -623,63 +504,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/movies.json">
+    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/WelcomeScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="129713" column="41" selection-start-line="129713" selection-start-column="41" selection-end-line="129713" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Database/JSONToTDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/controllers/MovieController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="113" column="29" lean-forward="true" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="527">
+          <caret line="31" column="14" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Database/MovieMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="-85">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/JSONToTDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/fx/controllers/MovieInputController.java">
+    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/scene/control/TextField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="231" column="22" selection-start-line="231" selection-start-column="22" selection-end-line="231" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/Movie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Database/SparqlQueries.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="258" column="27" selection-start-line="258" selection-start-column="27" selection-end-line="258" selection-end-column="27" />
+        <state relative-caret-position="172">
+          <caret line="258" column="29" lean-forward="true" selection-start-line="258" selection-start-column="29" selection-end-line="258" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#557#558#0" expanded="true" />
@@ -687,6 +562,120 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainOld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Database/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/Test.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/controllers/RecommendationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/controllers/WelcomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/controllers/MovieInputController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/movies.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="802">
+          <caret line="129695" column="26" selection-start-line="129695" selection-start-column="26" selection-end-line="129695" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/controllers/GenreController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="92" column="29" selection-start-line="92" selection-start-column="29" selection-end-line="92" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/RecommendationScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="3206" column="18" selection-start-line="3206" selection-start-column="18" selection-end-line="3206" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/MovieInputScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="107" column="60" lean-forward="true" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/controllers/MovieController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="239" column="11" lean-forward="true" selection-start-line="239" selection-start-column="11" selection-end-line="239" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/fx/fmxl/GenreScreen.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

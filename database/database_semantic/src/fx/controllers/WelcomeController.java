@@ -12,7 +12,6 @@ import javafx.stage.Stage;
 
 public class WelcomeController {
 
-
     /**
      * When these methods are called, they will change the Scenes
      */

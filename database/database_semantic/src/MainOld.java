@@ -16,7 +16,8 @@ public class MainOld {
         Scanner scanner = new Scanner(System.in);
         String movie = scanner.nextLine();
 
-        /*System.out.println("Movie name: " + movieMap.get(movie).getTitle());
+        /*
+        System.out.println("Movie name: " + movieMap.get(movie).getTitle());
         System.out.println("Movie year: " + movieMap.get(movie).getYear());
         System.out.println("Movie country: " + movieMap.get(movie).getCountry());
         System.out.println("Movie language: " + movieMap.get(movie).getLanguage());
@@ -25,6 +26,7 @@ public class MainOld {
         System.out.println("Movie grossing: $" + movieMap.get(movie).getGross());
         System.out.println("Movie actors: " + movieMap.get(movie).getActors());
         System.out.println("Movie director: " + movieMap.get(movie).getDirector());
-        System.out.println("Movie keywords: " + movieMap.get(movie).getKeywords());*/
+        System.out.println("Movie keywords: " + movieMap.get(movie).getKeywords());
+        */
     }
 }

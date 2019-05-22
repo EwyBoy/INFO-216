@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+import Database.User;
 
 public class Algorithm {
 
     public Algorithm() {}
 
-    public static void reccommend(ArrayList movies, ArrayList genres) {
+    public static void reccommend(User user) {
 
     }
 

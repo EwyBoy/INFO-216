@@ -24,16 +24,14 @@ public class Main extends Application {
         //queries.close();
     }
 
-
-
     @Override
     public void start(Stage stage) throws Exception {
+        SparqlQueries sparqlQueries = new SparqlQueries();
+        testQueries(sparqlQueries);
 
         Parent root = FXMLLoader.load(getClass().getResource("fx/fmxl/MovieInputScreen.fxml"));
         Scene scene = new Scene(root);
-
         stage.setTitle("Movie Recommender System");
-
         stage.setScene(scene);
         stage.show();
     }

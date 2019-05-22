@@ -264,6 +264,20 @@ public class SparqlQueries {
         return resultSet;
     }
 
+    public ResultSet search(String search) {
+        String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/>" +
+                "SELECT DISTINCT ?title" +
+                " WHERE { ?movie info216:title ?title. " +
+                "FILTER regex(str(?title), \"" + search + "\", \"i\")." +
+                "}" +
+                "LIMIT 4830";
+
+        ResultSet resultSet = QueryExecutionFactory
+                .create(query, model)
+                .execSelect();
+        return resultSet;
+    }
+
     public Boolean personDirectorAndActor() {
         boolean match = false;
         String query = "PREFIX m: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/ontology/>" +
