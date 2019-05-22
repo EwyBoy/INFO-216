@@ -1,4 +1,4 @@
-package sample;
+package fx.controllers;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class WelcomeController {
      */
     public void startButtonPushed(ActionEvent event) throws IOException {
 
-        Parent movieScreenParent = FXMLLoader.load(getClass().getResource("MovieInputScreen.fxml"));
+        Parent movieScreenParent = FXMLLoader.load(getClass().getResource("fx/fmxl/MovieInputScreen.fxml"));
         Scene movieScreenScene = new Scene(movieScreenParent);
 
         //This line gets the Stage information
@@ -37,7 +37,7 @@ public class WelcomeController {
 
     public void backButtonPushed3(ActionEvent event) throws IOException {
 
-        Parent genreScreenParent = FXMLLoader.load(getClass().getResource("GenreScreen.fxml"));
+        Parent genreScreenParent = FXMLLoader.load(getClass().getResource("fx/fmxl/GenreScreen.fxml"));
         Scene genreScreenScene = new Scene(genreScreenParent);
 
         //This line gets the Stage information

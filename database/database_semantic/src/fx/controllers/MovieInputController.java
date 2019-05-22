@@ -1,21 +1,15 @@
-package sample;
+package fx.controllers;
 
 import Database.SparqlQueries;
-import Database.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import javax.swing.*;
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 
 public class MovieInputController {

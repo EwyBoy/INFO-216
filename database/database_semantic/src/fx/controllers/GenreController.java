@@ -1,4 +1,4 @@
-package sample;
+package fx.controllers;
 
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.IntegerBinding;
