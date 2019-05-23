@@ -106,11 +106,6 @@ public class MovieController implements Initializable {
 
     private ObservableList<MovieModel> observableList = FXCollections.observableArrayList();
 
-    public static Model firstTimeSetup() {
-        JSONToTDB jsontoTDB = new JSONToTDB("movies.json");
-        Model model = jsontoTDB.getModel();
-        return model;
-    }
 
     public static final HashMap<String, Movie> movieMap = new HashMap<>();
 
@@ -156,9 +151,6 @@ public class MovieController implements Initializable {
             });
             return row ;
         });
-
-        firstTimeSetup();
-
 
         SparqlQueries sparqlQueries = new SparqlQueries();
         ResultSet rs = sparqlQueries.allTitles();

@@ -7,9 +7,11 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.tdb.TDBFactory;
+import org.apache.jena.update.UpdateAction;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class SparqlQueries {
 
@@ -27,35 +29,37 @@ public class SparqlQueries {
         return movies;
     }
 
-    public void createMovieObjects(HashMap<String, Movie> movieMap) {
-        String query =
-                ""
-                + "PREFIX info216: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/page/> PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>"
-                + "SELECT ?title ?year ?genres ?runtime ?language ?country ?gross ?votes ?rating ?link ?id ?directorName WHERE {"
-                + "?movie info216:title ?title ;"
-                        + "dbo:year ?year ;"
-                        + "info216:genres ?genres ;"
-                        + "dbo:filmRuntime ?runtime ;"
-                        + "dbo:language ?language ;"
-                        + "dbo:country ?country ;"
-                        + "dbo:gross ?gross ;"
-                        + "info216:imdb_votes ?votes ;"
-                        + "dbo:rating ?rating ;"
-                        + "dbp:Hyperlink ?link ;"
-                        + "info216:imdbId ?id ;"
-                        + "dbo:director ?director."
-                        + "?director vcard:FN ?directorName."
-                        + "}";
-
-        ResultSet resultSet = QueryExecutionFactory
-                .create(query, model)
-                .execSelect();
-
-        while(resultSet.hasNext()) {
-            QuerySolution qsol = resultSet.next();
-            // ArrayList<String> actors = actorsOfTitle2(qsol.get("?title").toString());
-            // ArrayList<String> keywords = keywordsOfTitle(qsol.get("?title").toString());
-            if (qsol.get("?title") != null) {
+    public ArrayList<Movie> CreateMovieObjects(ArrayList<String> titles) {
+        ArrayList<Movie> movies = new ArrayList<>();
+        for(String title : titles) {
+            String query = ""
+                    + "PREFIX info216: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/page/> PREFIX dbo: <http://dbpedia.org/ontology/> "
+                    + "PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> "
+                    + "SELECT ?title ?year ?genres ?runtime ?language ?country ?gross ?votes ?rating ?link ?id ?directorName WHERE {"
+                    + "?movie info216:title ?title ;"
+                    + "dbo:year ?year ;"
+                    + "info216:genres ?genres ;"
+                    + "dbo:filmRuntime ?runtime ;"
+                    + "dbo:language ?language ;"
+                    + "dbo:country ?country ;"
+                    + "dbo:gross ?gross ;"
+                    + "info216:imdb_votes ?votes ;"
+                    + "dbo:rating ?rating ;"
+                    + "dbp:Hyperlink ?link ;"
+                    + "info216:imdbId ?id ;"
+                    + "dbo:director ?director."
+                    + "?director vcard:FN ?directorName."
+                    + "FILTER regex(?title, \"^" + title + "$\", \"i\")."
+                    + "}";
+            ResultSet resultSet = QueryExecutionFactory
+                    .create(query, model)
+                    .execSelect();
+            while (resultSet.hasNext()) {
+                QuerySolution qsol = resultSet.next();
+                ArrayList<String> actors = actorsOfTitle(qsol.get("?title").toString());
+                ArrayList<String> keywords = keywordsOfTitle(qsol.get("?title").toString());
+                // add all properties returned from query as paramters for the movie object.
+                if (qsol.get("?title") != null) {
                     Movie movie = new Movie(
                             qsol.get("?title").toString(),
                             qsol.get("?year").toString(),
@@ -66,34 +70,204 @@ public class SparqlQueries {
                             qsol.get("?gross").toString(),
                             qsol.get("?votes").toString(),
                             qsol.get("?rating").toString(),
-                            "unknown score",
+                            "unknwown score",
                             qsol.get("?link").toString(),
                             qsol.get("?id").toString(),
                             qsol.get("?directorName").toString(),
-                            null,
-                            null);
-                    movieMap.put(qsol.get("?title").toString(), movie);
-                    //}
+                            actors,
+                            keywords);
+                    movies.add(movie);
                 }
             }
+        }
+        //  return list of movie-objects.
+        return movies;
+    }
 
+    // This method takes a parameter of several movies, and then queries the dbpedia endpoint to make a big list of all the subjects that occur in all of them.
+    // Then we find which of these subjects occur most often and return the top three of them. An example of a subject is: Films_about_sharks or Space-Adventure films and more.
+    public ArrayList<String> predictSubgenres(ArrayList<Movie> movies) {
+        if(movies.isEmpty()) {
+            return null;
+        }
+        // dbpedia has pretty inconsistent url's unfortunately for their movies.
+        // Therefore we often need to attempt several different versions to make a sucessfull query.
+        ArrayList<String> queryAttempts = prepareURLs(movies);
+        // movies that were sucessfully queried.
+        ArrayList<String> succesQueries = new ArrayList<>();
+        // top-subjects that will be returned.
+        ArrayList<String> subjects = new ArrayList<>();
+
+        int attempt = 1;
+        boolean skipNext = false;
+        System.out.println("\nGenerating predictions....\n");
+
+        for (String title : queryAttempts) {
+//              skips queries for movies that already had a sucesfull query.
+            if(!(skipNext)) {
+                String query = "PREFIX dc: <http://purl.org/dc/terms/> PREFIX dbo: <http://dbpedia.org/ontology/>" +
+                        "SELECT DISTINCT ?subject" +
+                        " WHERE {" +
+                        "<http://dbpedia.org/resource/" + title + "> dc:subject ?subject." +
+//                                                     " FILTER regex(str(?subject), \"about\", \"i\")." +
+                        "}";
+//                  System.out.println("Trying URL: " + "<http://dbpedia.org/resource/" + title + ">");
+                ResultSet resultSet = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query).execSelect();
+                if (resultSet.hasNext()) {
+                    succesQueries.add(title);
+                    // add all subjects to a big list, and format away the uri leaving only the subjects itself.
+                    resultSet.forEachRemaining(
+                            qsol -> subjects.add(qsol.get("?subject").toString().split(":")[2].replace("_", " "))
+                    );
+//                        if we made the query on first or second attempt, we dont have to any more until next movie.
+                    if (attempt == 1 || attempt == 2) {
+                        skipNext = true;
+                    }
+                }
+            }
+            else {
+                skipNext = false;
+            }
+            attempt++;
+//              time for next movie.
+            if(attempt > 3) {
+                attempt = 1;
+            }
+        }
+        // Let's sort the map of frequencies, so that we can easily find the top subjects.
+        Map<String, Integer> frequencyMap = new HashMap<>();
+        for (String s : subjects) {
+            Integer count = frequencyMap.get(s);
+            if (count == null)
+                count = 0;
+            frequencyMap.put(s, count + 1);
+        }
+        Sorting sorting = new Sorting();
+        frequencyMap = sorting.sortByValue(frequencyMap);
+        // The top three subjects we want are exactly the three first entries in the map.
+        int i = 0;
+        ArrayList<String> favorite_subgenres = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
+            boolean skip = false;
+            // skip some boring and generic sub-genres.
+            if(entry.getKey().contains("language") || entry.getKey().contains("American") || entry.getKey().contains("Studio") || entry.getKey().contains("Company")) {
+                skip = true;
+            }
+            if (i > 3) {
+                break;
+            }
+            if(!skip) {
+                favorite_subgenres.add(entry.getKey());
+                i++;
+            }
+        }
+        // print some information about the common subjects found....
+        System.out.println("\nBased on the movies...");
+        System.out.print("   ");
+        for(String title : succesQueries) {
+            System.out.print(title + "  | ");
+        }
+        System.out.println("\nYou really seem to love " + favorite_subgenres.get(0) + "!");
+        System.out.println("You also really like " + favorite_subgenres.get(1) + "!");
+        System.out.println("As well as " + favorite_subgenres.get(2) + "!\n");
+        return favorite_subgenres;
+    }
+
+    // private method used by method above.
+    // This method takes a list of movies, and makes returns a list of titles that are suitable for when querying the DBpedia sparqø-endpoint.
+    private ArrayList<String> prepareURLs(ArrayList<Movie> movies) {
+        ArrayList<String> queryAttempts = new ArrayList<>();
+        for (Movie m : movies) {
+            String year = m.getYear().split("\\^\\^")[0];
+            //url's cant have whitespace
+            String originalTitle = m.getTitle().replace(" ", "_");
+            // normal title-url
+            queryAttempts.add(originalTitle);
+            // title-url + _(film)
+            String titlePlusFilm = originalTitle + "_(film)";
+            queryAttempts.add(titlePlusFilm);
+            String titlePlusYear = originalTitle +  "_("+year+"_film)";
+            queryAttempts.add(titlePlusYear);
+        }
+        return queryAttempts;
     }
 
 
+    // This method queries the dbpedia.org sparql endpoint for descriptions that we want to add to our own TDB. Essentially combining data from two datasets.
+    public boolean insertDescriptionEndpoint(ArrayList<Movie> movies) {
+        if(movies.isEmpty()) {
+            return false;
+        }
+        ArrayList<String> queryAttempts = prepareURLs(movies);
+        int attempt = 1;
+        boolean skipNext = false;
+        System.out.println("\nRetrieveing descriptions from dbpedia.org....\n");
+        for (String title : queryAttempts) {
+            if(!(skipNext)) {
+                String query = "PREFIX dc: <http://purl.org/dc/terms/> PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>PREFIX dbo: <http://dbpedia.org/ontology/>" +
+                        " SELECT DISTINCT ?subject ?comment" +
+                        " WHERE {" +
+                        " <http://dbpedia.org/resource/" + title + ">  rdfs:comment ?comment." +
+                        "FILTER (lang(?comment) = 'en')." +
+                        "}";
+                ResultSet resultSet = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query).execSelect();
+                if (resultSet.hasNext()) {
+                    String originalTitle = title.split("_\\(")[0].replace("_"," ");
+                    resultSet.forEachRemaining(
+                            qsol -> insertDescription(originalTitle, qsol.get("?comment").toString()));
+                    if (attempt == 1 || attempt == 2) {
+                        skipNext = true;
+                    }
+                }
+            }
+            else {
+                skipNext = false;
+            }
+            attempt++;
+            // time for next movie.
+            if(attempt > 3) {
+                attempt = 1;
+            }
+        }
+        return true;
+    }
 
-    public void sparqlEndpoint(String title) {
-        title = title.replace(" ", "_");
-        String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX dbp: <http://dbpedia.org/ontology/> " +
-                "SELECT DISTINCT ?title " +
-                "WHERE { " +
-                    "?movie a dbp:Film ." +
-                    "?movie rdfs:label ?title." +
-                    "FILTER regex(str(?title), \"" + title + "\", \"i\")." +
-                "}";
-        System.out.println("QUERY: " + query);
+    // private method used by method above to insert descriptions into our TDB.
+    private void insertDescription(String title, String description) {
+        String query = ""
+                + "PREFIX info216: <http://info216.no/v2019/vocabulary/>"
+                + " INSERT {"
+                + "    ?extra info216:comment \""+description+"\". "
+                + "} "
+                + " WHERE { ?movie info216:title ?title; "
+                + "  info216:extra ?extra. "
+                + " FILTER regex(?title, \"^" + title + "$\", \"i\")."
+//                + "    }"
+                + "} ";
+        UpdateAction.parseExecute(query, model);
+    }
 
-        ResultSet resultSet = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query).execSelect();
-        resultSet.forEachRemaining(qsol -> System.out.println("?title"));
+    public ArrayList<String> getExtraDescription(ArrayList<Movie> movies) {
+        ArrayList<String> descriptions = new ArrayList<>();
+        for(Movie m: movies) {
+            String query =
+                    "PREFIX info216: <http://info216.no/v2019/vocabulary/> " +
+                            "SELECT DISTINCT ?title ?comment" +
+                            " WHERE { " +
+                            "?movie info216:title ?title . " +
+                            "?movie info216:extra ?extra . " +
+                            "?extra info216:comment ?comment ." +
+                            " FILTER regex(?title, \"^" + m.getTitle() + "$\", \"i\")." +
+                            "}";
+            ResultSet resultSet = QueryExecutionFactory
+                    .create(query, model)
+                    .execSelect();
+            if (resultSet.hasNext()) {
+                QuerySolution qsol = resultSet.next();
+                descriptions.add(qsol.get("?comment").toString());
+            }
+        }
+        return descriptions;
     }
 
     public boolean sparqlEndpointGetSubjects(String title) {
@@ -112,28 +286,6 @@ public class SparqlQueries {
         if(resultSet.hasNext()) {
             match = true;
             resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?subject")));
-        }
-        return match;
-    }
-
-
-    public boolean sparqlEndpointGetComment(String title) {
-        boolean match = false;
-        title = title.replace(" ", "_");
-        title += "_(film)";
-        String query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX dbp: <http://dbpedia.org/page/>" +
-                "SELECT DISTINCT ?comment " +
-                "WHERE {" +
-                  //"<http://dbpedia.org/resource/" + title + "> rdfs:label ?title." +
-                    "<http://dbpedia.org/resource/" + title + "> rdfs:comment ?comment." +
-                    "FILTER (lang(?comment) = 'en')." +
-                "}";
-        System.out.println("QUERY: " + query);
-
-        ResultSet resultSet = QueryExecutionFactory.sparqlService("http://dbpedia.org/sparql", query).execSelect();
-        if(resultSet.hasNext()) {
-            match = true;
-            resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?comment")));
         }
         return match;
     }
@@ -179,29 +331,12 @@ public class SparqlQueries {
         boolean match = false;
         String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/> PREFIX dbp: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> "+
                 "SELECT DISTINCT ?name WHERE { ?movie info216:title ?value .?movie info216:actors ?actors. ?actors dbp:starring ?actor. ?actor vcard:FN ?name." +
-                "FILTER regex(str(?value), \"" + title + "\", \"i\") .}";
+                "FILTER regex(str(?value), \"^" + title + "$\", \"i\") .}";
         ResultSet resultSet = QueryExecutionFactory
                 .create(query, model)
                 .execSelect();
         resultSet.forEachRemaining(qsol ->
-            System.out.println(qsol.get("?name").toString())
-            // list.add(qsol.get("?name").toString())
-        );
-        return list;
-    }
-
-    public ArrayList<String> actorsOfTitle2(String title) {
-        ArrayList<String> list = new ArrayList<>();
-        boolean match = false;
-        String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/> PREFIX dbo: <http://dbpedia.org/ontology/> PREFIX vcard: <http://www.w3.org/2001/vcard-rdf/3.0#> "+
-                "SELECT DISTINCT ?actor WHERE { ?movie info216:title ?title. ?movie dbo:actor ?actor. " +
-                "}";
-        ResultSet resultSet = QueryExecutionFactory
-                .create(query, model)
-                .execSelect();
-        resultSet.forEachRemaining(qsol ->
-            System.out.println(qsol.get("?actor\n").toString())
-            // list.add(qsol.get("?name").toString())
+                list.add(qsol.get("?name").toString())
         );
         return list;
     }
@@ -210,7 +345,7 @@ public class SparqlQueries {
         ArrayList<String> list = new ArrayList<>();
         String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/>  PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "+
                 "SELECT DISTINCT ?keywordLabel WHERE { ?movie info216:title ?value .?movie info216:keywords ?keywords. ?keywords info216:keyword ?keyword. ?keyword rdfs:label ?keywordLabel." +
-                "FILTER regex(str(?value), \"" + title + "\", \"i\") .}";
+                "FILTER regex(str(?value), \"^" + title + "$\", \"i\") .}";
 
         ResultSet resultSet = QueryExecutionFactory
                 .create(query, model)
@@ -336,6 +471,28 @@ public class SparqlQueries {
                     + "}", model)
                 .execSelect();
         resultSet.forEachRemaining(qsol -> System.out.println(qsol.toString()));
+    }
+
+    // This method prints x number of randomly selected mobies from out TDB. Mostly used for testing/simulation ourposes.
+    public ArrayList<String> selectRandomMovies(int queryLimit) {
+        ArrayList<String> titles = new ArrayList<>();
+        String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/> " +
+                "SELECT DISTINCT ?title " +
+                " WHERE { " +
+                "?movie info216:title ?title. " +
+                "}" +
+                "ORDER BY RAND()" +
+                "LIMIT "+ queryLimit;
+        ResultSet resultSet = QueryExecutionFactory
+                .create(query, model)
+                .execSelect();
+        while(resultSet.hasNext()) {
+            QuerySolution qsol = resultSet.next();
+            if(qsol.get("?title") != null){
+                titles.add(qsol.get("?title").toString());
+            }
+        }
+        return titles;
     }
 
 
