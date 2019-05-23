@@ -1,33 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane fx:id="frame" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="900.0" stylesheets="@dark_theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RecommendationController">
    <children>
-      <TitledPane animated="false" layoutX="14.0" layoutY="40.0" prefHeight="400.0" prefWidth="271.0" text="Movie 1" textAlignment="CENTER">
-         <content>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-         </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutX="305.0" layoutY="40.0" prefHeight="400.0" prefWidth="271.0" text="Movie 2" AnchorPane.rightAnchor="304.0">
-         <content>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-         </content>
-      </TitledPane>
-      <TitledPane animated="false" layoutX="595.0" layoutY="40.0" prefHeight="400.0" prefWidth="271.0" text="Movie 3">
-         <content>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-         </content>
-      </TitledPane>
-      <Button layoutX="363.0" layoutY="447.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="156.0" text="EXIT" />
-      <Text layoutX="373.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RECOMMENDATIONS" textAlignment="CENTER">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Text>
+      <Text fill="WHITE" layoutX="401.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Recommendations" />
+      <Button fx:id="exit" layoutX="522.0" layoutY="415.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="150.0" text="Exit" />
+      <Button fx:id="restart" layoutX="226.0" layoutY="415.0" mnemonicParsing="false" onAction="#restart" prefHeight="25.0" prefWidth="150.0" text="Restart" />
+      <AnchorPane layoutX="14.0" layoutY="56.0" prefHeight="352.0" prefWidth="274.0" styleClass="box-id"/>
+      <AnchorPane layoutX="612.0" layoutY="56.0" prefHeight="352.0" prefWidth="274.0" styleClass="box-id"/>
+      <AnchorPane layoutX="313.0" layoutY="56.0" prefHeight="352.0" prefWidth="274.0" styleClass="box-id"/>
    </children>
 </AnchorPane>

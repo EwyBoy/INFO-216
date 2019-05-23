@@ -10,7 +10,6 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.tdb.TDBFactory;
-import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.apache.jena.vocabulary.VCARD;
@@ -36,8 +35,7 @@ public class JSONToTDB {
             } catch(IOException e) {
                 e.printStackTrace();
             }
-            System.out.println("Doing first time setuo...");
-            System.out.println("Converting json to TDB file");
+
             this.model= parseJSONString(jsonString, model);
         }
     }
@@ -54,37 +52,44 @@ public class JSONToTDB {
         }
 
         return stringBuffer.toString();
+
     }
 
-    // This is the method that is responsible covnerting the JSON file into a semantic TDB file.
+
     public Model parseJSONString(String json, Model model) {
+
         JsonElement jsonElement = new JsonParser().parse(json);
         JsonArray jsonArray = jsonElement.getAsJsonArray();
-        // We use mostly dbpedia.org to describe our data semanticly.
+
         String dbo = "http://dbpedia.org/ontology/";
         String dbp = "http://dbpedia.org/page/";
+
         // Our extension uri that we use for the cases where we could not find a fitting property on dbpedia.
         String info216 = "http://info216.no/v2019/vocabulary/";
+
         String keywordURI = "http://info216.no/v2019/vocabulary/keyword#";
+        String genreURI = "http://info216.no/v2019/vocabulary/genre#";
 
-        String rdf = "https://www.w3.org/1999/02/22-rdf-syntax-ns#";
-        Property rdfAbout = model.createProperty(rdf+"about");
+        // String rdf = "https://www.w3.org/1999/02/22-rdf-syntax-ns#";
 
-        // Creating two classes - Film and Person. Actors and Directors will be members of Person.
+
+        /*
+
+        String owl = "http://www.w3.org/2002/07/owl#";
+        String rdfs = "http://www.w3.org/2000/01/rdf-schema#";
+
         Resource movieClass = model.createResource(OWL.Class);
-        movieClass.addProperty(rdfAbout, dbp + "Film");
         Resource personClass = model.createResource(OWL.Class);
 
         Resource actorClass = model.createResource(OWL.Class);
-        personClass.addProperty(rdfAbout, dbp + "Person");
         actorClass.addProperty(RDFS.subClassOf, personClass);
 
+        */
 
-        // This is where we parse the unsemantic moves.json and convert it into a triple store database.
-
-        // for each movie in the json-file.
         for(JsonElement movie : jsonArray) {
             JsonObject movieObject = movie.getAsJsonObject();
+
+            // Property rdfType = model.createProperty(rdf + "type");
 
             Property title = model.createProperty(info216 + "title");
             Property year = model.createProperty(dbo + "year");
@@ -103,14 +108,14 @@ public class JSONToTDB {
             Property imdb_rating = model.createProperty(dbo + "rating");
             Property imdb_link = model.createProperty(dbp + "Hyperlink");
             Property imdb_id = model.createProperty(info216 + "imdbId");
-            Property extra_information = model.createProperty(info216 + "extra");
 
-            // Create director resource
             Resource directorPerson = model.createResource(dbp + movieObject.get("director").getAsString())
                     .addProperty(RDF.type, dbo + "MovieDirector")
-                    .addProperty(RDFS.subClassOf, personClass)
+                    .addProperty(RDFS.subClassOf, dbo + "Person")
                     .addProperty(VCARD.FN, movieObject.get("director").getAsString())
                     .addProperty(VCARD.TITLE, "Director");
+
+            // System.out.println("Movie: " + movieObject.get("title").getAsString());
 
             Resource movieRDF = model.createResource(dbp + movieObject.get("title").getAsString())
                     .addProperty(RDF.type, dbp + "Film")
@@ -135,11 +140,15 @@ public class JSONToTDB {
             JsonObject actorsJson = movieObject.getAsJsonObject("actors");
             Set<Map.Entry<String, JsonElement>> entrySet = actorsJson.entrySet();
             Resource actorsBlankNode = model.createResource();
+
+
+
+
             // The blank node has an actor property for each actor that stars in this movie.
             for(Map.Entry<String,JsonElement> entry : entrySet){
                 Resource actorPerson = model.createResource(dbp + actorsJson.get(entry.getKey()).getAsString())
                         .addProperty(RDF.type, dbo + "Actor")
-                        .addProperty(RDFS.subClassOf, personClass)
+                        .addProperty(RDFS.subClassOf, dbo + "Person")
                         .addProperty(VCARD.FN, actorsJson.get(entry.getKey()).getAsString())
                         .addProperty(VCARD.TITLE, "Actor");
                 actorsBlankNode.addProperty(actor, actorPerson);
@@ -147,11 +156,14 @@ public class JSONToTDB {
             }
             movieRDF.addProperty(actors, actorsBlankNode);
 
+
             // For each movie, create a keywords property that points to a blank node.
+            // The blank node has a keyword property for each keyword that is associated with this movie.
+
             JsonObject keywordsJSON = movieObject.getAsJsonObject("keywords");
             Set<Map.Entry<String, JsonElement>> keywordEntrySet = keywordsJSON.entrySet();
             Resource keywordsBlankNode = model.createResource();
-            // The blank node has a keyword property for each keyword that is associated with this movie.
+
             for(Map.Entry<String,JsonElement> entry : keywordEntrySet){
                 Resource keywordResource = model.createResource(keywordURI + keywordsJSON.get(entry.getKey()).getAsString())
                         .addProperty(RDF.type, keywordURI)
@@ -161,13 +173,12 @@ public class JSONToTDB {
             }
             movieRDF.addProperty(keywords, keywordsBlankNode);
 
-            // Create a blank node for extra information which be added to the movies which are the output of the recommendation algorithm.
-            Resource extraBlankNode = model.createResource();
-            movieRDF.addProperty(extra_information, extraBlankNode);
         }
+
         //return the model contain all semantic triples made from the original JSON document.
         return model;
     }
+
     public Model getModel() {
         return this.model;
     }

@@ -23,7 +23,6 @@ import javafx.stage.Stage;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
@@ -85,9 +84,6 @@ public class MovieController implements Initializable {
     private Button add_movie;
 
     @FXML
-    private Text amount_selected;
-
-    @FXML
     private Button next;
 
     @FXML
@@ -95,6 +91,9 @@ public class MovieController implements Initializable {
 
     @FXML
     private Button reset;
+
+    @FXML
+    private ListView<String> movieLister;
 
     @FXML
     private TableView<MovieModel> movielist;
@@ -105,7 +104,13 @@ public class MovieController implements Initializable {
     public static List<Movie> selectedMovies = new ArrayList<>();
 
     private ObservableList<MovieModel> observableList = FXCollections.observableArrayList();
+    private ObservableList<String> observableMovieList = FXCollections.observableArrayList();
 
+    public static Model firstTimeSetup() {
+        JSONToTDB jsontoTDB = new JSONToTDB("movies.json");
+        Model model = jsontoTDB.getModel();
+        return model;
+    }
 
     public static final HashMap<String, Movie> movieMap = new HashMap<>();
 
@@ -152,6 +157,8 @@ public class MovieController implements Initializable {
             return row ;
         });
 
+        firstTimeSetup();
+
         SparqlQueries sparqlQueries = new SparqlQueries();
         ResultSet rs = sparqlQueries.allTitles();
 
@@ -159,7 +166,6 @@ public class MovieController implements Initializable {
             qsol -> {
                 if (qsol.get("?title").toString() != null) {
                     observableList.add(new MovieModel(qsol.get("?title").toString()));
-                    System.out.println(qsol.get("?title"));
                 }
             }
         );
@@ -190,7 +196,9 @@ public class MovieController implements Initializable {
         reset.setOnMouseClicked(clicked -> {
             selectedMovies.clear();
             error.setText("");
-            amount_selected.setText(selectedMovies.size() + " / 5 - Movies Selected");
+            add_movie.setText("Add Movie To List - " + selectedMovies.size() + " / 5");
+            observableMovieList.clear();
+            movieLister.setItems(observableMovieList);
         });
 
         add_movie.setOnMouseClicked(clicked -> {
@@ -201,7 +209,9 @@ public class MovieController implements Initializable {
                         if (!selectedMovies.contains(selectedMovie)) {
                             selectedMovies.add(selectedMovie);
                             error.setText(selectedMovie.getTitle() + " was added to your list");
-                            amount_selected.setText(selectedMovies.size() + " / 5 - Movies Selected");
+                            add_movie.setText("Add Movie To List - " + selectedMovies.size() + " / 5");
+                            observableMovieList.add(selectedMovie.getTitle());
+                            movieLister.setItems(observableMovieList);
                         } else {
                             error.setText("ERROR: This movie has already been selected");
                             System.out.println("ERROR: This movie has already been selected");

@@ -19,6 +19,18 @@
 }
 
 
+.box-id {
+    -fx-base: #111111;
+    -fx-control-inner-background: #111111;
+    -fx-background-color: #111111;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+}
+
 .label-header {
     -fx-font-size: 32pt;
     -fx-font-family: "Segoe UI Light";
@@ -62,8 +74,6 @@
 .list-view:focused .table-row-cell:filled:focused:selected {
     -fx-background-color: -fx-focus-color;
 }
-
-
 
 .table-view {
     -fx-base: #1d1d1d;

@@ -161,6 +161,7 @@ public class GenreController implements Initializable {
         if (selectedGenres.size() == 3) {
             User user = new User(MovieController.selectedMovies, selectedGenres);
             MovieRecommender.recommend(user);
+
             Parent welcomeScreenParent = FXMLLoader.load(getClass().getResource("RecommendationScreen.fxml"));
             Scene welcomeScreenScene = new Scene(welcomeScreenParent);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

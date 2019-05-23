@@ -25,7 +25,7 @@
          <GridPane.margin>
             <Insets top="20.0" />
          </GridPane.margin></Button>
-      <Label fx:id="labelWelcome" text="Movie Recommender System" GridPane.halignment="CENTER">
+      <Label fx:id="labelWelcome" text="Movie Recommendation System" GridPane.halignment="CENTER">
          <GridPane.margin>
             <Insets bottom="30.0" />
          </GridPane.margin>
