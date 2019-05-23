@@ -2,138 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Database/Sorting.java" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/LICENSE" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/LICENSE" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/NOTICE" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/NOTICE" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/README" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/README" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbbackup.bat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbbackup.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbcompact.bat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbcompact.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbdump.bat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbdump.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbloader.bat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbloader.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbquery.bat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbquery.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbstats.bat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbstats.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbupdate.bat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bat/tdb2_tdbupdate.bat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/arq" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/arq" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/infer" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/infer" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/iri" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/iri" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/jena" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/jena" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/juuid" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/juuid" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/nquads" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/nquads" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/ntriples" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/ntriples" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/qparse" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/qparse" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfcat" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfcat" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfcompare" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfcompare" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfcopy" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfcopy" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfdiff" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfdiff" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfparse" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfparse" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfxml" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rdfxml" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/riot" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/riot" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rset" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rset" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rsparql" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rsparql" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rupdate" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/rupdate" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/schemagen" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/schemagen" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/sparql" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/sparql" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbbackup" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbbackup" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbcompact" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbcompact" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbdump" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbdump" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbloader" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbloader" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbquery" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbquery" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbstats" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbstats" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbupdate" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdb2.tdbupdate" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbbackup" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbbackup" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbdump" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbdump" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2common" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2common" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2data" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2data" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2index" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbloader2index" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbquery" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbquery" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbstats" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbstats" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbupdate" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/tdbupdate" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/trig" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/trig" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/turtle" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/turtle" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/uparse" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/uparse" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/update" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/update" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/utf8" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/utf8" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/wwwdec" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/wwwdec" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/wwwenc" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/bin/wwwenc" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/jena-log4j.properties" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/jena-log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/AlgebraEx.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/AlgebraEx.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/AlgebraExec.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/AlgebraExec.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExProg1.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExProg1.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExProg2.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExProg2.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExQuerySelect1.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExQuerySelect1.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExQuerySelect2.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExQuerySelect2.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExampleDBpedia1.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExampleDBpedia1.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExampleDBpedia2.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExampleDBpedia2.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExampleDBpedia3.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/ExampleDBpedia3.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/aggregates/CustomAggregate.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/aggregates/CustomAggregate.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/bgpmatching/OpExecutorAlt.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/bgpmatching/OpExecutorAlt.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/bgpmatching/StageAltMain.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/bgpmatching/StageAltMain.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/bgpmatching/StageGeneratorAlt.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/bgpmatching/StageGeneratorAlt.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/constructquads/ExampleConstructQuads.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/constructquads/ExampleConstructQuads.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/engine/MyQueryEngine.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/engine/MyQueryEngine.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/filter/classify.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/filter/classify.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/propertyfunction/labelSearch.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/propertyfunction/labelSearch.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/propertyfunction/localname.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/propertyfunction/localname.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/propertyfunction/uppercase.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/propertyfunction/uppercase.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT1_ReadModel.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT1_ReadModel.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT2_ReadDataset.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT2_ReadDataset.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT3_RDFParser.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT3_RDFParser.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT4_StreamRDF_Filter.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT4_StreamRDF_Filter.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT5_StreamRDFCollect.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT5_StreamRDFCollect.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT6_AddNewReader.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT6_AddNewReader.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT7_ParserPiped.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT7_ParserPiped.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT_RDFXML_ReaderProperties.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT_RDFXML_ReaderProperties.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT_RDFXML_WriteProperties.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOT_RDFXML_WriteProperties.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOTw1_writeModel.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOTw1_writeModel.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOTw2_writeRDF.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOTw2_writeRDF.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOTw3_AddNewWriter.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/ExRIOTw3_AddNewWriter.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/Ex_WriteJsonLD.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/riot/Ex_WriteJsonLD.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/update/UpdateExecuteOperations.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/update/UpdateExecuteOperations.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/update/UpdateProgrammatic.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/update/UpdateProgrammatic.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/update/UpdateReadFromFile.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/arq/examples/update/UpdateReadFromFile.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/camera.owl" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/camera.owl" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/eswc-2006-09-21.rdf" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/eswc-2006-09-21.rdf" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/test1.owl" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/test1.owl" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/test2.owl" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/data/test2.owl" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/README.md" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/README.md" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/bin/get-data" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/bin/get-data" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/pom.xml" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/Base.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/Base.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/CheeseBase.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/CheeseBase.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/helloworld/HelloWorld.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/helloworld/HelloWorld.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/pizza/PizzaSparqlNoInf.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/java/org/apache/jena/example/pizza/PizzaSparqlNoInf.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/resources/data/cheeses-0.1.ttl" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/resources/data/cheeses-0.1.ttl" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/resources/data/pizza.owl.rdf" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/resources/data/pizza.owl.rdf" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/resources/ontologies/cheese.ttl" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/main/resources/ontologies/cheese.ttl" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/test/java/org/apache/jena_examples/AppTest.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena-examples/src/test/java/org/apache/jena_examples/AppTest.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/classHierarchy/ClassHierarchy.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/classHierarchy/ClassHierarchy.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/classHierarchy/Main.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/classHierarchy/Main.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/describeClass/DescribeClass.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/describeClass/DescribeClass.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/describeClass/Main.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/ontology/describeClass/Main.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial01.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial01.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial02.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial02.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial03.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial03.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial04.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial04.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial05.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial05.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial06.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial06.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial07.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial07.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial08.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial08.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial09.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial09.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial10.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial10.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial11.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/jena/examples/rdf/Tutorial11.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExQuadFilter.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExQuadFilter.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB1.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB1.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB2.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB2.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB3.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB3.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB4.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB4.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB5.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB5.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB6.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB6.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB_Txn1.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB_Txn1.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB_Txn2.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB_Txn2.java" />
-      <change beforePath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB_Txn3.java" afterPath="$PROJECT_DIR$/lib/apache-jena-3.11.0/src-examples/tdb/examples/ExTDB_Txn3.java" />
       <change beforePath="$PROJECT_DIR$/movie_tdb/OSP.dat" afterPath="$PROJECT_DIR$/movie_tdb/OSP.dat" />
       <change beforePath="$PROJECT_DIR$/movie_tdb/OSP.idn" afterPath="$PROJECT_DIR$/movie_tdb/OSP.idn" />
       <change beforePath="$PROJECT_DIR$/movie_tdb/POS.dat" afterPath="$PROJECT_DIR$/movie_tdb/POS.dat" />
@@ -211,9 +82,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2">
-              <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="240">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -600,7 +473,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32824427" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -653,7 +526,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -771,9 +646,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="3" column="30" lean-forward="true" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="240">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
