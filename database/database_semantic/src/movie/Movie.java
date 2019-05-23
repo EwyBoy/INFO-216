@@ -1,4 +1,4 @@
-package Database;
+package movie;
 import java.util.ArrayList;
 
 public class Movie {

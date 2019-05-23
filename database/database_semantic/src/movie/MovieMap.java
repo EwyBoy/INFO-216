@@ -1,4 +1,4 @@
-package Database;
+package movie;
 
 import com.google.gson.*;
 import com.google.gson.stream.JsonReader;

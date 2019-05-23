@@ -1,11 +1,15 @@
 package Database;
 
-import org.apache.jena.query.*;
+import movie.Movie;
+import org.apache.jena.query.Dataset;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.tdb.TDBFactory;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 public class SparqlQueries {
 
@@ -69,7 +73,7 @@ public class SparqlQueries {
                             null,
                             null);
                     movieMap.put(qsol.get("?title").toString(), movie);
-//                }
+                    //}
                 }
             }
 
@@ -264,7 +268,21 @@ public class SparqlQueries {
         return resultSet;
     }
 
-    public ResultSet search(String search) {
+    public ResultSet allGenres() {
+        String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/>" +
+                "SELECT DISTINCT ?genre" +
+                " WHERE { ?movie info216:genres ?genre " +
+                ".}" +
+                "LIMIT 4830";
+
+        ResultSet resultSet = QueryExecutionFactory
+                .create(query, model)
+                .execSelect();
+        //resultSet.forEachRemaining(qsol -> System.out.println(qsol.get("?genre")));
+        return resultSet;
+    }
+
+    public ResultSet searchTitle(String search) {
         String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/>" +
                 "SELECT DISTINCT ?title" +
                 " WHERE { ?movie info216:title ?title. " +
@@ -272,6 +290,19 @@ public class SparqlQueries {
                 "}" +
                 "LIMIT 4830";
 
+        ResultSet resultSet = QueryExecutionFactory
+                .create(query, model)
+                .execSelect();
+        return resultSet;
+    }
+
+    public ResultSet searchGenre(String search) {
+        String query = "PREFIX info216: <http://info216.no/v2019/vocabulary/>" +
+                "SELECT DISTINCT ?genre" +
+                " WHERE { ?movie info216:genres ?genre. " +
+                "FILTER regex(str(?genre), \"" + search + "\", \"i\")." +
+                "}" +
+                "LIMIT 4830";
         ResultSet resultSet = QueryExecutionFactory
                 .create(query, model)
                 .execSelect();

@@ -171,7 +171,7 @@ public class labelSearch implements PropertyFunction
     private static Var createNewVar()
     {
         hiddenVariableCount ++ ;
-        String varName = "-search-"+hiddenVariableCount ;
+        String varName = "-searchTitle-"+hiddenVariableCount ;
         return Var.alloc(varName) ;
     }
     
@@ -193,7 +193,7 @@ public class labelSearch implements PropertyFunction
         // Or register it.
         PropertyFunctionRegistry.get().put("http://example/f#search", labelSearch.class) ;
         prologue = "PREFIX ext: <http://example/f#>\n" ;
-        qs = prologue+"SELECT * { ?x ext:search 'EF' }" ;
+        qs = prologue+"SELECT * { ?x ext:searchTitle 'EF' }" ;
         query = QueryFactory.create(qs) ;
         try ( QueryExecution qExec = QueryExecutionFactory.create(query, model) ) {
             ResultSet rs = qExec.execSelect() ;

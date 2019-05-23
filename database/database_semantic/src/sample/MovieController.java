@@ -1,15 +1,12 @@
-package fx.controllers;
+package sample;
 
 import Database.JSONToTDB;
-import Database.Movie;
-import Database.MovieMap;
+import movie.Movie;
+import movie.MovieMap;
 import Database.SparqlQueries;
-import fx.models.MovieModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -32,7 +29,6 @@ import java.net.URL;
 import java.util.*;
 
 public class MovieController implements Initializable {
-
 
     @FXML
     private AnchorPane search;
@@ -190,7 +186,7 @@ public class MovieController implements Initializable {
             observableList.clear();
             movielist.setItems(observableList);
 
-            ResultSet searchSet = sparqlQueries.search(search_box.getText());
+            ResultSet searchSet = sparqlQueries.searchTitle(search_box.getText());
 
             searchSet.forEachRemaining (
                 qsol -> {
@@ -243,7 +239,7 @@ public class MovieController implements Initializable {
 
     public void backButtonPushed(ActionEvent event) throws IOException {
         selectedMovies.clear();
-        Parent welcomeScreenParent = FXMLLoader.load(getClass().getResource("fx/fmxl/WelcomeScreen.fxml"));
+        Parent welcomeScreenParent = FXMLLoader.load(getClass().getResource("WelcomeScreen.fxml"));
         Scene welcomeScreenScene = new Scene(welcomeScreenParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(welcomeScreenScene);
@@ -252,14 +248,18 @@ public class MovieController implements Initializable {
 
     public void nextButtonPushed(ActionEvent event) throws IOException {
 
-        Parent welcomeScreenParent = FXMLLoader.load(getClass().getResource("fx/fmxl/GenreScreen.fxml"));
-        Scene welcomeScreenScene = new Scene(welcomeScreenParent);
+        if (selectedMovies.size() == 5) {
+            Parent welcomeScreenParent = FXMLLoader.load(getClass().getResource("GenreScreen.fxml"));
+            Scene welcomeScreenScene = new Scene(welcomeScreenParent);
 
-        //This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+            //This line gets the Stage information
+            Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 
-        window.setScene(welcomeScreenScene);
-        window.show();
-
+            window.setScene(welcomeScreenScene);
+            window.show();
+        } else {
+            error.setText("You must select 5 movies before continuing");
+            System.out.println("You must select 5 movies before continuing");
+        }
     }
 }

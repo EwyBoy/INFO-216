@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.controllers.MovieController">
+<GridPane alignment="center" hgap="10" stylesheets="@dark_theme.css" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MovieController">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
@@ -21,73 +21,72 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <AnchorPane fx:id="search" prefHeight="480.0" prefWidth="880.0">
+      <AnchorPane fx:id="search" prefHeight="480.0" prefWidth="880.0" stylesheets="@dark_theme.css">
          <children>
             <TextField fx:id="search_box" layoutX="562.0" layoutY="32.0" prefHeight="25.0" prefWidth="278.0" />
-            <Button fx:id="next" onAction="#nextButtonPushed" layoutX="769.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Next" />
+            <Button fx:id="next" layoutX="769.0" layoutY="440.0" mnemonicParsing="false" onAction="#nextButtonPushed" prefHeight="33.0" prefWidth="81.0" text="Next" />
             <Pane fx:id="movieinfo" layoutX="40.0" layoutY="63.0" prefHeight="378.0" prefWidth="462.0">
                <children>
                   <ImageView fx:id="cover" fitHeight="168.0" fitWidth="200.0" layoutX="238.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-                  <Text fx:id="title" layoutX="33.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title: ">
+                  <Text fx:id="title" fill="WHITE" layoutX="33.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Title: ">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="country" layoutX="31.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country: ">
+                  <Text fx:id="country" fill="WHITE" layoutX="31.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Country: ">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="language" layoutX="33.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Language: ">
+                  <Text fx:id="language" fill="WHITE" layoutX="33.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Language: ">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="year" layoutX="33.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year: ">
+                  <Text fx:id="year" fill="WHITE" layoutX="33.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Year: ">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="age_rating" layoutX="32.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age Rating:">
+                  <Text fx:id="age_rating" fill="WHITE" layoutX="32.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Age Rating:">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="user_rating" layoutX="32.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Rating:">
+                  <Text fx:id="user_rating" fill="WHITE" layoutX="32.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="User Rating:">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="grossing" layoutX="32.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Grossing: ">
+                  <Text fx:id="grossing" fill="WHITE" layoutX="32.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Grossing: ">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="director" layoutX="32.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Director:">
+                  <Text fx:id="director" fill="WHITE" layoutX="32.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Director:">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="actors" layoutX="32.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Actors: ">
+                  <Text fx:id="actors" fill="WHITE" layoutX="32.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Actors: ">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="runtime" layoutX="32.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Runtime: ">
+                  <Text fx:id="runtime" fill="WHITE" layoutX="32.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Runtime: ">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="genres" layoutX="33.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genres:">
+                  <Text fx:id="genres" fill="WHITE" layoutX="33.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-id" text="Genres:">
                      <font>
                         <Font name="Times New Roman" size="14.0" />
                      </font>
                   </Text>
-                  <Text fx:id="error" layoutX="14.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="374.2792830467224" />
-                 <!-- <Text fx:id="title" layoutX="241.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title: " />-->
+                  <Text fx:id="error" fill="WHITE" layoutX="14.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="374.2792830467224" />
                </children>
             </Pane>
-            <Text layoutX="216.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movie Selector" textAlignment="CENTER">
+            <Text fill="WHITE" layoutX="216.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movie Selector" textAlignment="CENTER">
                <font>
                   <Font name="Times New Roman" size="18.0" />
                </font>
@@ -97,21 +96,21 @@
                 <TableColumn fx:id="tab_table" prefWidth="273.0" text="Movies" />
               </columns>
             </TableView>
-            <Text fx:id="search_text" layoutX="682.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
+            <Text fx:id="search_text" fill="WHITE" layoutX="682.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
                <font>
                   <Font name="Times New Roman Bold" size="14.0" />
                </font>
             </Text>
             <Button fx:id="add_movie" layoutX="53.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="360.0" text="Add Movie To List" />
-            <Text fx:id="amount_selected" layoutX="419.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 5 - Movies Selected">
+            <Text fx:id="amount_selected" fill="WHITE" layoutX="419.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 / 5 - Movies Selected">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Text>
-            <Button fx:id="back" onAction="#backButtonPushed" layoutX="688.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Back" />
-            <Text layoutX="678.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="8.87109375">
+            <Button fx:id="back" layoutX="688.0" layoutY="440.0" mnemonicParsing="false" onAction="#backButtonPushed" prefHeight="33.0" prefWidth="81.0" text="Back" />
+            <Text fill="WHITE" layoutX="678.0" layoutY="465.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" wrappingWidth="8.87109375">
                <font>
-                  <Font size="22.0" />
+                  <Font size="30.0" />
                </font>
             </Text>
             <Button fx:id="reset" layoutX="564.0" layoutY="440.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="110.0" text="Reset List" />

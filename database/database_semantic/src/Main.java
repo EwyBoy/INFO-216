@@ -29,9 +29,9 @@ public class Main extends Application {
         SparqlQueries sparqlQueries = new SparqlQueries();
         testQueries(sparqlQueries);
 
-        Parent root = FXMLLoader.load(getClass().getResource("fx/fmxl/MovieInputScreen.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("sample/WelcomeScreen.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Movie Recommender System");
+        stage.setTitle("Movie movie.MovieRecommender System");
         stage.setScene(scene);
         stage.show();
     }
